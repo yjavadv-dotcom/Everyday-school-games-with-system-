@@ -1,0 +1,291 @@
+import random
+choice = input('Play odd or even? (y/n): ')
+if choice=='y':
+    print('The game is played considering the number of runs taken by player and the system in a single wicket. This is so as to check your aptitude against the system, so no need to worry if you score more than the system and the game does not end immediately.\n')
+    print('odd or even?\n')
+    tc = int(input('1 for odd and 2 for even: '))
+    utoss = int(input('your number for toss: '))
+    systoss = random.randint(1,6)
+    print('number chosen by system for toss is given below')
+    print(systoss)
+    toss = utoss + systoss
+    if toss%2 == 0 and tc==2:
+        print("It's even. You won the toss! \n Choose to bat or bowl?\n")
+        borb = int(input('1 for bat and 2 for bowl: '))
+        if borb==1:
+            playerno=0
+            pno=int(input('your number: '))
+            sysno=random.randint(1,6)
+            print(sysno)
+            while pno!=sysno:
+                playerno=playerno+pno
+                print('Current runs: ', playerno)
+                pno=int(input('your number: '))
+                sysno=random.randint(1,6)
+                print(sysno)
+            else:
+                print('OUT! You scored: ', playerno)
+            print('NOW THE SYSTEM IS BATTING!\n')
+            sysno=0
+            pno=int(input('your number: '))
+            sno=random.randint(1,6)
+            print(sno)
+            while pno!=sno:
+                sysno=sysno+sno
+                print('Current runs: ', sysno)
+                pno=int(input('your number: '))
+                sno=random.randint(1,6)
+                print(sno)
+            else:
+                print('OUT! System scored: ', sysno)
+            if playerno>sysno:
+                print('You win by given runs: ', playerno-sysno)
+            elif sysno>playerno:
+                print('You lose by given runs: ', sysno-playerno)
+            else:
+                print('You just tied with a few lines of code lol!')
+        elif borb==2:
+            sysno=0
+            pno=int(input('your number: '))
+            sno=random.randint(1,6)
+            print(sno)
+            while pno!=sno:
+                sysno=sysno+sno
+                print('Current runs: ', sysno)
+                pno=int(input('your number: '))
+                sno=random.randint(1,6)
+                print(sno)
+            else:
+                print('OUT! System scored: ', sysno)
+            print('NOW YOU ARE BATTING!\n')
+            playerno=0
+            pno=int(input('your number: '))
+            sysno=random.randint(1,6)
+            print(sysno)
+            while pno!=sysno:
+                playerno=playerno+pno
+                print('Current runs: ', playerno)
+                pno=int(input('your number: '))
+                sysno=random.randint(1,6)
+                print(sysno)
+            else:
+                print('OUT! You scored: ', playerno)
+            if playerno>sysno:
+                print('You win by given runs: ', playerno-sysno)
+            elif sysno>playerno:
+                print('You lose by given runs: ', sysno-playerno)
+            else:
+                print('You just tied with a few lines of code lol!')
+        else:
+            print('INVALID INPUT!')
+    elif toss%2==0 and tc==1:
+        print("It's even. THE SYSTEM won the toss!\n")
+        borb=random.randint(1,2)
+        if borb==1:
+            print('THE SYSTEM HAS CHOSEN TO BAT!\n')
+            sysno=0
+            pno=int(input('your number: '))
+            sno=random.randint(1,6)
+            print(sno)
+            while pno!=sno:
+                sysno=sysno+sno
+                print('Current runs: ', sysno)
+                pno=int(input('your number: '))
+                sno=random.randint(1,6)
+                print(sno)
+            else:
+                print('OUT! System scored: ', sysno)
+            print('NOW YOU ARE BATTING!\n')
+            playerno=0
+            pno=int(input('your number: '))
+            sysno=random.randint(1,6)
+            print(sysno)
+            while pno!=sysno:
+                playerno=playerno+pno
+                print('Current runs: ', playerno)
+                pno=int(input('your number: '))
+                sysno=random.randint(1,6)
+                print(sysno)
+            else:
+                print('OUT! You scored: ', playerno)
+            if playerno>sysno:
+                print('You win by given runs: ', playerno-sysno)
+            elif sysno>playerno:
+                print('You lose by given runs: ', sysno-playerno)
+            else:
+                print('You just tied with a few lines of code lol!')
+        else:
+            print('THE SYSTEM HAS CHOSEN TO BOWL!\n')
+            playerno=0
+            pno=int(input('your number: '))
+            sysno=random.randint(1,6)
+            print(sysno)
+            while pno!=sysno:
+                playerno=playerno+pno
+                print('Current runs: ', playerno)
+                pno=int(input('your number: '))
+                sysno=random.randint(1,6)
+                print(sysno)
+            else:
+                print('OUT! You scored: ', playerno)
+            print('NOW THE SYSTEM IS BATTING!\n')
+            sysno=0
+            pno=int(input('your number: '))
+            sno=random.randint(1,6)
+            print(sno)
+            while pno!=sno:
+                sysno=sysno+sno
+                print('Current runs: ', sysno)
+                pno=int(input('your number: '))
+                sno=random.randint(1,6)
+                print(sno)
+            else:
+                print('OUT! System scored: ', sysno)
+            if playerno>sysno:
+                print('You win by given runs: ', playerno-sysno)
+            elif sysno>playerno:
+                print('You lose by given runs: ', sysno-playerno)
+            else:
+                print('You just tied with a few lines of code lol!')
+    elif toss%2==1 and tc==1:
+        print("It's odd. You won the toss! \n Choose to bat or bowl?\n")
+        borb = int(input('1 for bat and 2 for bowl: '))
+        if borb==1:
+            playerno=0
+            pno=int(input('your number: '))
+            sysno=random.randint(1,6)
+            print(sysno)
+            while pno!=sysno:
+                playerno=playerno+pno
+                print('Current runs: ', playerno)
+                pno=int(input('your number: '))
+                sysno=random.randint(1,6)
+                print(sysno)
+            else:
+                print('OUT! You scored: ', playerno)
+            print('NOW THE SYSTEM IS BATTING!\n')
+            sysno=0
+            pno=int(input('your number: '))
+            sno=random.randint(1,6)
+            print(sno)
+            while pno!=sno:
+                sysno=sysno+sno
+                print('Current runs: ', sysno)
+                pno=int(input('your number: '))
+                sno=random.randint(1,6)
+                print(sno)
+            else:
+                print('OUT! System scored: ', sysno)
+            if playerno>sysno:
+                print('You win by given runs: ', playerno-sysno)
+            elif sysno>playerno:
+                print('You lose by given runs: ', sysno-playerno)
+            else:
+                print('You just tied with a few lines of code lol!')
+        elif borb==2:
+            sysno=0
+            pno=int(input('your number: '))
+            sno=random.randint(1,6)
+            print(sno)
+            while pno!=sno:
+                sysno=sysno+sno
+                print('Current runs: ', sysno)
+                pno=int(input('your number: '))
+                sno=random.randint(1,6)
+                print(sno)
+            else:
+                print('OUT! System scored: ', sysno)
+            print('NOW YOU ARE BATTING!\n')
+            playerno=0
+            pno=int(input('your number: '))
+            sysno=random.randint(1,6)
+            print(sysno)
+            while pno!=sysno:
+                playerno=playerno+pno
+                print('Current runs: ', playerno)
+                pno=int(input('your number: '))
+                sysno=random.randint(1,6)
+                print(sysno)
+            else:
+                print('OUT! You scored: ', playerno)
+            if playerno>sysno:
+                print('You win by given runs: ', playerno-sysno)
+            elif sysno>playerno:
+                print('You lose by given runs: ', sysno-playerno)
+            else:
+                print('You just tied with a few lines of code lol!')
+        else:
+            print('INVALID INPUT!')
+    elif toss%2==1 and tc==2:
+        print("It's odd. THE SYSTEM won the toss!\n")
+        borb=random.randint(1,2)
+        if borb==1:
+            print('THE SYSTEM HAS CHOSEN TO BAT!\n')
+            sysno=0
+            pno=int(input('your number: '))
+            sno=random.randint(1,6)
+            print(sno)
+            while pno!=sno:
+                sysno=sysno+sno
+                print('Current runs: ', sysno)
+                pno=int(input('your number: '))
+                sno=random.randint(1,6)
+                print(sno)
+            else:
+                print('OUT! System scored: ', sysno)
+            print('NOW YOU ARE BATTING!\n')
+            playerno=0
+            pno=int(input('your number: '))
+            sysno=random.randint(1,6)
+            print(sysno)
+            while pno!=sysno:
+                playerno=playerno+pno
+                print('Current runs: ', playerno)
+                pno=int(input('your number: '))
+                sysno=random.randint(1,6)
+                print(sysno)
+            else:
+                print('OUT! You scored: ', playerno)
+            if playerno>sysno:
+                print('You win by given runs: ', playerno-sysno)
+            elif sysno>playerno:
+                print('You lose by given runs: ', sysno-playerno)
+            else:
+                print('You just tied with a few lines of code lol!')
+        else:
+            print('THE SYSTEM HAS CHOSEN TO BOWL!\n')
+            playerno=0
+            pno=int(input('your number: '))
+            sysno=random.randint(1,6)
+            print(sysno)
+            while pno!=sysno:
+                playerno=playerno+pno
+                print('Current runs: ', playerno)
+                pno=int(input('your number: '))
+                sysno=random.randint(1,6)
+                print(sysno)
+            else:
+                print('OUT! You scored: ', playerno)
+            print('NOW THE SYSTEM IS BATTING!\n')
+            sysno=0
+            pno=int(input('your number: '))
+            sno=random.randint(1,6)
+            print(sno)
+            while pno!=sno:
+                sysno=sysno+sno
+                print('Current runs: ', sysno)
+                pno=int(input('your number: '))
+                sno=random.randint(1,6)
+                print(sno)
+            else:
+                print('OUT! System scored: ', sysno)
+            if playerno>sysno:
+                print('You win by given runs: ', playerno-sysno)
+            elif sysno>playerno:
+                print('You lose by given runs: ', sysno-playerno)
+            else:
+                print('You just tied with a few lines of code lol!')
+    else:
+        print('Impossible error occurred!')
+else:
+    print('Nirthi po he')
